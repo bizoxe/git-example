@@ -1,0 +1,73 @@
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    <!-- Banner Title -->
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/06.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <div class="title mt-60 animate-box" data-animate-effect="fadeInUp">
+                            <h1 class="mb-0">Блог</h1>
+                            <h6>про макияж #2</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Content & Sidebar -->
+    <section id="blog" class="fredia-blog-section blog-page section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="item">
+                                <div class="post-img">
+                                    <a href="{{ url_for('blog.blog_bridal')}}"> <img src="{{ url_for('static', filename='images/blog/blog_pages/bp4.jpg')}}" alt=""></a>
+                                </div>
+                                <div class="post-cont"><span class="tag">советы визажистов #</span>
+                                    <h5>
+                                        <a href="{{ url_for('blog.blog_bridal')}}">Свадебный макияж</a>
+                                    </h5>
+                                    <div class="info">#блог</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="item">
+                                <div class="post-img">
+                                    <a href="{{ url_for('blog.blog_photoshoot')}}"> <img src="{{ url_for('static', filename='images/blog/blog_pages/bp5.jpg')}}" alt=""></a>
+                                </div>
+                                <div class="post-cont"><span class="tag">советы визажистов #</span>
+                                    <h5>
+                                        <a href="{{ url_for('blog.blog_photoshoot')}}">Для фотосессии</a>
+                                    </h5>
+                                    <div class="info">#блог</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="item">
+                                <div class="post-img">
+                                    <a href="{{ url_for('blog.blog_magazines')}}"> <img src="{{ url_for('static', filename='images/blog/blog_pages/bp6.jpg')}}" alt=""></a>
+                                </div>
+                                <div class="post-cont"><span class="tag">публикации #</span>
+                                    <h5>
+                                        <a href="{{ url_for('blog.blog_magazines')}}">Публикации в журналах</a>
+                                    </h5>
+                                    <div class="info">#блог</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    {% include 'includes/pagination.html' %}
+                </div>
+                <!-- Tags -->
+                {% include 'includes/tags.html' %}
+            </div>
+        </div>
+    </section>
+    {% endblock content %}

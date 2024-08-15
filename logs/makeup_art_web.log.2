@@ -1,0 +1,91 @@
+2023-11-28 19:28:11,970 ERROR: Exception on /bridal-makeup [GET] [in /home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/app/blog/routes.py", line 33, in blog_bridal
+    return render_template('blog/blog_bridal.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/alex/production_projects/makeup_artist_website/app/templates/blog/blog_bridal.html", line 1, in top-level template code
+    {% extends 'layout.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/app/templates/layout.html", line 70, in top-level template code
+    {% block content %}
+  File "/home/alex/production_projects/makeup_artist_website/app/templates/blog/blog_bridal.html", line 42, in block 'content'
+    <img src="{{ url_for('static', filename='images/blog/blog_pages/bss1.jpg')}}" alt="">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+2023-11-28 19:28:18,053 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-28 19:56:12,404 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-28 19:57:11,065 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-28 20:29:23,361 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-28 20:29:54,486 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-28 20:29:54,956 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-28 20:31:06,144 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-28 20:53:59,848 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-28 20:54:10,941 ERROR: Exception on /contact [GET] [in /home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/routes.py", line 39, in contact_page
+    return render_template('main_pages/contact.html', form=form, page_title='Контакты')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/alex/production_projects/makeup_artist_website/app/templates/main_pages/contact.html", line 1, in top-level template code
+    {% extends 'layout.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/app/templates/layout.html", line 70, in top-level template code
+    {% block content %}
+  File "/home/alex/production_projects/makeup_artist_website/app/templates/main_pages/contact.html", line 100, in block 'content'
+    {% block java_scripts %}
+  File "/home/alex/production_projects/makeup_artist_website/app/templates/main_pages/contact.html", line 135, in block 'java_scripts'
+    const response = await fetch('{{ url_for("main_pages.contact")}}', {
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main_pages.contact'. Did you mean 'main_pages.contact_page' instead?
+2023-11-28 20:54:42,326 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]

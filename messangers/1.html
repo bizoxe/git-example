@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Noraure</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- favicon
+		============================================ -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico')}}">
+        <!-- Google Fonts
+		============================================ -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+		<!-- all css here -->
+		<!-- bootstrap v3.3.6 css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+		<!-- animate css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css')}}">
+		<!-- jquery-ui.min css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.min.css')}}">
+		<!-- meanmenu css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/meanmenu.min.css')}}">
+		<!-- owl.carousel css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css')}}">
+        <!-- nivo slider CSS
+		============================================ -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='lib/css/nivo-slider.css')}}" type="text/css" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='lib/css/preview.css')}}" type="text/css" media="screen" />
+		<!-- font-awesome css -->
+        <link rel="stylesheet" href="css/all-fontawesome.min.css">
+		<!-- style css -->
+		<link rel="stylesheet" href="css/style1.css">
+		<!-- responsive css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css')}}">
+		<!-- modernizr css -->
+        <script src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+    </head>
+    <body>
+<div class="fabs" onclick="toggleBtn()">
+  <div class="action">
+    <i class="fa-regular fa-plus" id="add"></i>
+    <i class="fa-regular fa-xmark" style="display: none;" id="remove"></i>
+  </div>
+  <div class="btns">
+    <a href="#" class="btn" style="background: #8b00ff;">
+      <i class="fa-brands fa-viber"></i>
+    </a>
+    <a href="#" class="btn" style="background: #E4405F;">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="#" class="btn" style="background: #CD201F;">
+      <i class="fa-regular fa-phone"></i>
+    </a>
+    <a href="#" class="btn" style="background: #1877F2;">
+      <i class="fa-brands fa-telegram"></i>
+    </a>
+  </div>
+</div>
+
+
+
+		<!-- all js here -->
+		<!-- jquery latest version -->
+        <script src="{{ url_for('static', filename='js/vendor/jquery-1.12.0.min.js')}}"></script>
+		<!-- bootstrap js -->
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+        <!-- parallax js -->
+        <script src="{{ url_for('static', filename='js/parallax.min.js')}}"></script>
+        <!-- zoom js -->
+        <script src="{{ url_for('static', filename='js/jquery.snipe.min.js')}}"></script>
+		<!-- owl.carousel js -->
+        <script src="{{ url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+		<!-- meanmenu js -->
+        <script src="{{ url_for('static', filename='js/jquery.meanmenu.js')}}"></script>
+		<!-- jquery-ui js -->
+        <script src="{{ url_for('static', filename='js/jquery-ui.min.js')}}"></script>
+		<!-- wow js -->
+        <script src="{{ url_for('static', filename='js/wow.min.js')}}"></script>
+        <!-- Ajax mail js -->
+        <script src="{{ url_for('static', filename='js/ajax-mail.js')}}"></script>
+        <!-- Nivo slider js -->
+		<script src="{{ url_for('static', filename='lib/js/jquery.nivo.slider.js')}}"></script>
+		<script src="{{ url_for('static', filename='lib/home.js')}}"></script>
+		<!-- plugins js -->
+        <script src="{{ url_for('static', filename='js/plugins.js')}}"></script>
+		<!-- main js -->
+        <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+    </body>
+    <script>
+    function toggleBtn() {
+        const Btns = document.querySelector(".btns");
+        const add = document.getElementById("add");
+        const remove = document.getElementById("remove");
+        const btn = document.querySelector(".btns").querySelectorAll("a");
+        Btns.classList.toggle("open");
+        if (Btns.classList.contains("open")) {
+            add.style.display = "none";
+            remove.style.display = "block";
+            btn.forEach((e, i) => {
+                setTimeout(() => {
+                    bottom = 40 * i;
+                    e.style.bottom = bottom + "px";
+          }, 100 * i);
+        });
+        } else {
+           add.style.display = "block";
+           remove.style.display = "none";
+           btn.forEach(e => {
+            e.style.bottom = "0px";
+        });
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,31 @@
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    <!-- Banner Title -->
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/02.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <div class="title mt-60 animate-box" data-animate-effect="fadeInUp">
+                            <h1 class="text-danger">Error 500</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 500 Page -->
+    <section class="not-found section-padding-error">
+        <div class="container">
+            <div class="row mb-45">
+                <div class="col-md-12 text-center">
+                    <h6>500 Page</h6>
+                    <h2>500</h2>
+                    <h1>Проблемы на стороне сервера.</h1>
+                    <p>В ближайшее время сервер снова заработает.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock content %}

@@ -1,0 +1,98 @@
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    <!-- Banner Title -->
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/05.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <div class="title mt-60 animate-box" data-animate-effect="fadeInUp">
+                            <h1 class="mb-0">Блог</h1>
+                            <h6>публикации в журналах</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Makeup Categories -->
+                {% include 'includes/makeup_categories.html' %}
+                <div class="col-xl-8 col-lg-8">
+                    <div class="service-details">
+                        <div class="service-details-img mb-30">
+                            <img src="{{ url_for('static', filename='images/blog/blog_pages/bs6.jpg')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                       <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"><span class="line-one"></span></div>
+                        <div class="col-md-7 mb-30 animate-box" data-animate-effect="fadeInUp">
+                            <h3>Публикации в журналах</h3>
+                            <p>Я всегда открыта к сотрудничеству с фотографами, стилистами, моделями и другими специалистами
+                                в индустрии красоты. И мне очень приятно, что наши совместные работы получили высокую оценку
+                                за рубежом: Европа, Канада, США, Австралия.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInUp">
+                            <a href="{{ url_for('static', filename='images/blog/b1.jpg')}}" title="Edith magazine" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img"><img src="{{ url_for('static', filename='images/blog/b1.jpg')}}" class="img-fluid mx-auto d-block" alt=""></div>
+                            <div class="gallery-detail text-center"><i class="ti-plus"></i></div>
+                        </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInUp">
+                            <a href="{{ url_for('static', filename='images/blog/b2.jpg')}}" title="Malvie magazine" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img"><img src="{{ url_for('static', filename='images/blog/b2.jpg')}}" class="img-fluid mx-auto d-block" alt=""></div>
+                            <div class="gallery-detail text-center"><i class="ti-plus"></i></div>
+                        </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInUp">
+                            <a href="{{ url_for('static', filename='images/blog/b3.jpg')}}" title="Malvie magazine" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img"><img src="{{ url_for('static', filename='images/blog/b3.jpg')}}" class="img-fluid mx-auto d-block" alt=""></div>
+                            <div class="gallery-detail text-center"><i class="ti-plus"></i></div>
+                        </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInUp">
+                            <a href="{{ url_for('static', filename='images/blog/b4.jpg')}}" title="Editorial magazine" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img"><img src="{{ url_for('static', filename='images/blog/b4.jpg')}}" class="img-fluid mx-auto d-block" alt=""></div>
+                            <div class="gallery-detail text-center"><i class="ti-plus"></i></div>
+                        </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInUp">
+                            <a href="{{ url_for('static', filename='images/blog/b5.jpg')}}" title="Editorial magazine" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img"><img src="{{ url_for('static', filename='images/blog/b5.jpg')}}" class="img-fluid mx-auto d-block" alt=""></div>
+                            <div class="gallery-detail text-center"><i class="ti-plus"></i></div>
+                        </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 gallery-item animate-box" data-animate-effect="fadeInUp">
+                            <a href="{{ url_for('static', filename='images/blog/b6.jpg')}}" title="The Mermaid magazine" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img"><img src="{{ url_for('static', filename='images/blog/b6.jpg')}}" class="img-fluid mx-auto d-block" alt=""></div>
+                            <div class="gallery-detail text-center"><i class="ti-plus"></i></div>
+                        </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}

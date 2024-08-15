@@ -1,0 +1,63 @@
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    <!-- Banner Title -->
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/05.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <div class="title mt-60 animate-box" data-animate-effect="fadeInUp">
+                            <h1 class="mb-0">Читать</h1>
+                            <h6>повседневный макияж</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service-area py-120">
+        <div class="container">
+            <div class="row">
+                <!-- Makeup Categories -->
+                {% include 'includes/makeup_categories.html' %}
+                <div class="col-xl-8 col-lg-8">
+                    <div class="service-details">
+                        <div class="service-details-img mb-30">
+                            <img src="{{ url_for('static', filename='images/blog/blog_pages/bs1.jpg')}}" alt="">
+                        </div>
+                        <div class="service-details">
+                            <h3 class="mb-20">Повседневный макияж</h3>
+                            <p class="mb-20">
+                                Самый универсальный дневной макияж – естественный макияж. Подходит для любого случая.
+                                Дневной макияж помогает подчеркнуть природную красоту,
+                                сделать акцент на достоинствах и слегка затушевать недостатки.
+                                Дневной макияж - это косметические средства неярких цветовых сочетаний,
+                                простота линий и практичность. Дневной макияж по виду должен быть прозрачным, лёгким по исполнению,
+                                и прочным по применению. Чтобы лучшим образом сочетать роскошь и скромность, женственность и
+                                строгость, романтическое обаяние и деловитую уверенность, для дневного макияжа применяются
+                                косметические средства приглушённых, светлых тонов: "слоновая кость", белый, бежевый (песочный
+                                и золотистый), персиковый, розовый, серый, голубой. Перламутр также отлично смотрится с этим
+                                видом макияжа.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6 mb-20">
+                                    <img src="{{ url_for('static', filename='images/blog/blog_pages/bss1.jpg')}}" alt="">
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <img src="{{ url_for('static', filename='images/blog/blog_pages/bss2.jpg')}}" alt="">
+                                </div>
+                            </div>
+                            <p class="mb-20">
+                                <h4>Акцент на губы.</h4>
+                                Сейчас в моде насыщенные цвета и огромный выбор помад с различными эффектами: и лаковые губы,
+                                и перламутр, и помады-хамелеоны, и блески. Если предпочтение останавливается на губах,
+                                то глаза необходимо сделать нейтральными.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}

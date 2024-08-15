@@ -1,0 +1,110 @@
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    <!-- Banner Title -->
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/04.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <div class="title mt-60 animate-box" data-animate-effect="fadeInUp">
+                            <h1 class="mb-0">прайс-лист</h1>
+                            <h6>на мои услуги</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Price Page -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <span>цены</span>
+                    <h2>на услуги макияжа</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
+                    <ul>
+                        <li><i class="ti-pencil"></i> цена макияжа, указанная ниже, актуальна при выезде в пределах МКАД.</li>
+                        <li><i class="ti-pencil"></i> выезд в Минский район обсуждается отдельно.</li>
+                        <li><i class="ti-pencil"></i> цена указана с моей декоративной косметикой.</li>
+                        <li><i class="ti-pencil"></i> любая услуга до открытия салона (до 9:00) + $10.</li>
+                        <li><i class="ti-pencil"></i> условия работы в студии (оборудованное рабочее место, гримерный стол и
+                            зеркало с подсветкой, кольцевая лампа) всегда положительно влияют на результат и время работы.</li>
+                    </ul>
+                    <div class="row services-price mb-30">
+                        <div class="col-md-12">
+                            <div class="services-price-info">
+                                <h5 class="title1">дневной <span class="price1">$40-45</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- nude (натуральный) <span class="price">$40-45</span></h6>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">вечерний <span class="price1">$50-60</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- голливудский <span class="price">$50-60</span></h6>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- smoky eyes <span class="price">$50-60</span></h6>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">на выпускной <span class="price1">$50-60</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- натуральный (хорошая кожа) <span class="price">$50</span></h6>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- натуральный (проблемная кожа) <span class="price">$55</span></h6>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- сложный (элементы графики) <span class="price">$60</span></h6>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">лифтинг <span class="price1">$50-60</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- от 40 до 50 лет <span class="price">$50</span></h6>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- от 50 и старше <span class="price">$55-60</span></h6>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">детский <span class="price1">по запросу</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">мужской <span class="price1">$30-35</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">свадебный комплекс (пробный + в день торежества)<br>
+                                    (только в комплексе) <span class="price1">$100</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h6 class="title">- пробный <span class="price">$50</span></h6>
+                                <p>* в день торжества до открытия салона (до 9:00) + $10</p>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">на фотосессию <span class="price1">$35-45</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">фантазийный с элементами фейс арта <span class="price1">$100</span></h5>
+                            </div>
+                            <div class="services-price-info">
+                                <h5 class="title1">на хэллоуин <span class="price1">от $50</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 offset-md-1 text-center animate-box" data-animate-effect="fadeInUp">
+                     <img src="{{ url_for('static', filename='images/elena/t1.jpg')}}" class="mb-30" alt="">
+                    <p class="text mb-0"><span><i>Елена Долгорукая</i></span></p>
+                    <p class="text"><i>визажист & стилист</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}

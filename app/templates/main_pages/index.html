@@ -1,0 +1,342 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <!-- Slider -->
+     <div class="slider">
+        <div class="swiper-container parallax-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/05.jpg')}}">
+                        <div class="container">
+                            <div class="row justify-content-left">
+                                <div class="col-md-7">
+                                    <div class="caption left">
+                                        <h1>Елена Долгорукая</h1>
+                                        <h2>визажист-стилист</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/01.jpg')}}"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/03.jpg')}}"></div>
+                </div>
+                <div class="swiper-slide text-center">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/02.jpg')}}">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <div class="caption center">
+                                        <h1>Елена Долгорукая</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/04.jpg')}}"></div>
+                </div>
+            </div>
+            <!-- slider setting -->
+            <div class="setone setwo">
+                <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer"><i class="ti-angle-right"></i></div>
+                <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer"><i class="ti-angle-left"></i></div>
+            </div>
+            <div class="swiper-pagination top botm"></div>
+            <!-- social media -->
+            <div class="social-icon">
+                <a href="https://www.instagram.com/dolgorukaya_makeup"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/Elena_makeup_bot" rel="nofollow"><i class="fab fa-telegram"></i></a>
+                <a href="viber://chat?number=%2B375257085014"><i class="fab fa-viber"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- General Services -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <span>что я умею</span>
+                    <h1>услуги визажа</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"> <span class="line-one"></span> </div>
+                        <div class="col-md-7 mb-30 animate-box" data-animate-effect="fadeInUp">
+                            <p><b>Меня зовут Елена, я профессиональный визажист-стилист. Собираетесь ли вы на свадьбу, вечеринку
+                                или фотосессию, или предпочитаете более простой естественный вид, я создам этот образ для Вас.</b>
+                            </p>
+                            <p>За годы работы в бьюти сфере разработала свой собственный уникальный стиль. Комбинирую
+                                последние тренды макияжа и превращаю их в естественные и захватывающие образы.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row services">
+                <div class="col-md-4 mb-15">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s1.jpg')}}" alt=""></div>
+                        <div class="con">
+                            <h5><a href="{{ url_for('main_pages.portfolio')}}">повседневный</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-15">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s2.jpg')}}" alt=""></div>
+                        <div class="con">
+                            <h5><a href="{{ url_for('main_pages.portfolio')}}">вечерний</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-15">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s3.jpg')}}" alt=""></div>
+                        <div class="con">
+                            <h5><a href="{{ url_for('main_pages.portfolio')}}">лифтинг-макияж</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s4.jpg')}}" alt=""></div>
+                        <div class="con">
+                            <h5><a href="{{ url_for('main_pages.portfolio')}}">свадебный</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s5.jpg')}}" alt=""></div>
+                        <div class="con">
+                            <h5><a href="{{ url_for('main_pages.portfolio')}}">для фотосессии</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s6.jpg')}}" alt=""></div>
+                        <div class="con">
+                            <h5><a href="{{ url_for('main_pages.portfolio')}}">креативный</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="background bg-img bg-fixed bg-img-position-center section-padding" data-background="{{ url_for('static', filename='images/slider/05.jpg')}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2>стоимость услуг</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Дневной макияж</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">40-45 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-2">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Вечерний макияж</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">50-60 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Лифтинг - макияж</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">от 50 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-2">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Свадебный макияж</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">от 100 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Для фотосессии</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">35-45 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-2">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Обучение</h4>
+                            </div>
+                            <p class="pricing-desc"><b>Стоимость обговаривается индивидуально.</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-right animate-box" data-animate-effect="fadeInUp">
+                    <p><a href="{{ url_for ('main_pages.price_page') }}" class="underline-text">подробно про стоимость</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Testimonials -->
+    <div class="testimonials section-padding bg-img bg-fixed" data-background="{{ url_for('static', filename='images/slider/02.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center"> <span>пара слов ...</span>
+                    <h1>отзывы клиентов</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel owl-theme col-md-12">
+                    <div class="item-box">
+                        <span class="quote"><img src="{{ url_for('static', filename='images/testimonials/quot.png')}}" alt=""></span>
+                        <p>"Безусловно, я рекомендую Елену в качестве визажиста для любого проекта. Профессионализм и
+                            неконфликтность делают ее незаменимым членом команды. Работает очень чисто, что существенно
+                            сокращает время на ретушь фотографий."
+                        </p>
+                        <div class="info">
+                            <div class="author-img"><img src="{{ url_for('static', filename='images/testimonials/1.png')}}" alt=""></div>
+                            <div class="cont">
+                                <h6>Екатерина Крусь</h6> <span>фотограф</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <span class="quote"><img src="{{ url_for('static', filename='images/testimonials/quot.png')}}" alt=""></span>
+                        <p>"Огромное спасибо мастеру Елене, образ получился сногсшибательным. Нужен был вечерний макияж
+                            для корпоратива. В работе легкая, не навязывает ничего, внимательная, всегда спрашивала,
+                            что нравится, что не нравится. Макияж был очень стойким, мне кажется, если не смыла бы, то
+                            еще и следующий день проходила). Теперь буду постоянным клиентом."
+                        </p>
+                        <div class="info">
+                            <div class="author-img"> <img src="{{ url_for('static', filename='images/testimonials/2.png')}}" alt=""></div>
+                            <div class="cont">
+                                <h6>Ирина</h6> <span>администратор</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <span class="quote"><img src="{{ url_for('static', filename='images/testimonials/quot.png')}}" alt=""></span>
+                        <p>"Спасибо большое Елене за свадебный макияж! Он был очень комфортный, нежный, подчеркивал
+                            достоинства и скрыл все недостатки кожи. А главное, смотрелся очень естественно. Если
+                            будет нужен еще макияж для какого-либо другого события, обязательно к ней обращусь. И,
+                            конечно, буду рекомендовать её друзьям и знакомым."
+                        </p>
+                        <div class="info">
+                            <div class="author-img"><img src="{{ url_for('static', filename='images/testimonials/3.png')}}" alt=""></div>
+                            <div class="cont">
+                                <h6>Ольга Ситник</h6> <span>флорист</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <span class="quote"><img src="{{ url_for('static', filename='images/testimonials/quot.png')}}" alt=""></span>
+                        <p>"Елена отличный мастер и прекрасный человек! Учла мои пожелания и выполнила макияж, который
+                            превзошёл все ожидания. Так красиво глаза мне ещё никто не красил. Отдельно нужно сказать
+                            про то, как были накрашены губы. Просто что-то невероятное! Хорошая и качественная косметика.
+                            Очень рада знакомству с Еленой. Надеюсь, что мы увидимся ещё не один раз. Высший балл!!!"
+                        </p>
+                        <div class="info">
+                            <div class="author-img"><img src="{{ url_for('static', filename='images/testimonials/4.png')}}" alt=""></div>
+                            <div class="cont">
+                                <h6>Юлия Новак</h6> <span>дизайнер одежды</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog -->
+    <section class="blog-grid section-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <span>мой блог</span>
+                    <h1>публикации в журналах</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 owl-carousel owl-theme">
+                    <div class="item list animate-box" data-animate-effect="fadeInUp">
+                        <div class="img"><img src="{{ url_for('static', filename='images/blog/1.jpg')}}" alt=""></div>
+                        <div class="cont">
+                            <h6>
+                                <a href="{{ url_for('blog.blog_magazines')}}">Публикация в VIGOUR magazine,<br>Канада</a>
+                            </h6>
+                            <a href="{{ url_for('blog.blog_magazines')}}" class="underline-text">узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="item list animate-box" data-animate-effect="fadeInUp">
+                        <div class="img"><img src="{{ url_for('static', filename='images/blog/2.jpg')}}" alt=""></div>
+                        <div class="cont">
+                            <h6>
+                                <a href="{{ url_for('blog.blog_magazines')}}">Публикация в THE MERMAID magazine,<br>Австралия</a>
+                            </h6>
+                            <a href="{{ url_for('blog.blog_magazines')}}" class="underline-text">узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="item list animate-box" data-animate-effect="fadeInUp">
+                        <div class="img"><img src="{{ url_for('static', filename='images/blog/3.jpg')}}" alt=""></div>
+                        <div class="cont">
+                            <h6>
+                                <a href="{{ url_for('blog.blog_magazines')}}">Публикация в журнале MARIKA,<br>Италия</a>
+                            </h6>
+                            <a href="{{ url_for('blog.blog_magazines')}}" class="underline-text">узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-right animate-box" data-animate-effect="fadeInUp">
+                    <p><a href="{{ url_for('blog.blog_one')}}" class="underline-text">блог</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+         <!-- telegram button -->
+    <div type="button" class="callback-bt">
+        <a href="https://t.me/Elena_makeup_bot" rel="nofollow">
+        <div class="text-call">
+        <span>телеграм<br>бот</span>
+        </div></a>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,165 @@
+    {% extends 'layout.html' %}
+
+    <!-- Input Mask for phone number -->
+    {% block input_mask %}
+    <script src="{{ url_for('static', filename='js/plugins/jquery.inputmask.min.js')}}"></script>
+    {% endblock input_mask %}
+
+    {% block content %}
+    <!-- Banner Title -->
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/04.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <div class="title mt-60 animate-box" data-animate-effect="fadeInUp">
+                            <h1 class="mb-0">Контакты</h1>
+                            <h6>для связи и адрес студии</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Info -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <span>информация</span>
+                    <h2>для связи со мной</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row mb-60">
+                        <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"> <span class="line-one"></span></div>
+                        <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
+                            <p>Связаться со мной вы можете любым удобным для Вас способом:</p>
+                            <ul>
+                                <li><i class="ti-pencil"></i> оставить онлайн-заявку на сайте,</li>
+                                <li><i class="ti-pencil"></i> заказать услугу через телеграм-бота,</li>
+                                <li><i class="ti-pencil"></i> написать в вайбер,</li>
+                                <li><i class="ti-pencil"></i> позвонить.</li>
+                            </ul>
+                            <p><i><b>С уважением Елена Долгорукая.</b></i></p>
+                            <p><b>Телефон : </b><a href="tel:+375257085014">+375 (22) 208-50-14</a></p>
+                            <p><b>Адрес студии :</b> улица Пушкина, дом 33/2</p>
+                        </div>
+                        <div class="col-md-5 offset-md-1 animate-box" data-animate-effect="fadeInUp">
+                            <h3>оставить заявку</h3>
+                            <!-- Booking Form -->
+                            <form id="form" method="post" class="contact__form" novalidate>
+                                            {{ form.csrf_token }}
+                                <div id="csrf_token-error" class="invalid-feedback d-block"></div>
+                                    <!-- Form Elements -->
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            {{ form.name() }}
+                                        <div id="name-error" class="invalid-feedback d-block"></div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            {{ form.phone(id="tel") }}
+                                        <div id="phone-error" class="invalid-feedback d-block"></div>
+                                        </div>
+                                        <div class="col-md-8 form-group">
+                                            {{ form.services() }}
+                                        <div id="services-error" class="invalid-feedback d-block"></div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            {{ form.date.label() }}
+                                            {{ form.date() }}
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            {{ form.time.label() }}
+                                            {{ form.time() }}
+                                        </div>
+                                        <div class="col-md-10 form-group">
+                                            {{ form.message() }}
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input name="submit" type="submit"  value="Отправить">
+                                        </div>
+                                    </div>
+                            </form>
+                            <!-- Success Message -->
+                            <div class="row">
+                                <div class="alert alert-success" id="success-message" style="display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13419.040333881774!2d-79.93218134282569!3d32.77209999120473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe7a1ae84ff639%3A0xe5c782f71924a526!2s24%20King%20St%2C%20Charleston%2C%20SC%2029401%2C%20Amerika%20Birle%C5%9Fik%20Devletleri!5e0!3m2!1str!2str!4v1635894790855!5m2!1str!2str" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% block java_scripts %}
+        <!-- JS for Phone Mask Input -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#tel").inputmask("+375(99)-999-99-99");
+            });
+        </script>
+        <!-- JS for Booking Form -->
+        <script>
+            const form = document.getElementById('form');
+            const successMessage = document.getElementById('success-message');
+            const date = document.getElementById('date');
+            const time = document.getElementById('time');
+            const message = document.getElementById('message');
+            const fields = {
+                csrf_token: {
+                    input: document.getElementById('csrf_token'),
+                    error: document.getElementById('csrf_token-error')
+                },
+                name: {
+                    input: document.getElementById('name'),
+                    error: document.getElementById('name-error')
+                },
+                phone: {
+                    input: document.getElementById('tel'),
+                    error: document.getElementById('phone-error')
+                },
+                services: {
+                    input: document.getElementById('services'),
+                    error: document.getElementById('services-error')
+                }
+            }
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const response = await fetch('{{ url_for("main_pages.contact_page")}}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        csrf_token: fields.csrf_token.input.value,
+                        name: fields.name.input.value,
+                        phone: fields.phone.input.value,
+                        services: fields.services.input.value,
+                        date: date.value,
+                        time: time.value,
+                        message: message.value
+                    })
+                });
+                if (response.ok) {
+                    successMessage.innerHTML = await response.text();
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                } else {
+                    const errors = await response.json();
+                    Object.keys(errors).forEach((key) => {
+                        fields[key].input.classList.add('is-invalid');
+                        fields[key].error.innerHTML = errors[key][0];
+                    });
+                }
+            });
+        </script>
+        {% endblock java_scripts %}
+
+    {% endblock content %}

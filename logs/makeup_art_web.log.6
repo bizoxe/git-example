@@ -1,0 +1,142 @@
+2023-11-27 18:13:27,806 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-27 18:14:13,644 ERROR: Exception on /contact [POST] [in /home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py", line 54, in create_mail_server
+    server.login(user_login, password)
+  File "/usr/lib/python3.11/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "/usr/lib/python3.11/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/routes.py", line 27, in contact_page
+    create_mail_server(form)
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py", line 52, in create_mail_server
+    with smtplib.SMTP(host=host, port=port) as server:
+  File "/usr/lib/python3.11/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+2023-11-27 18:14:14,628 ERROR: Exception on /contact [POST] [in /home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py", line 54, in create_mail_server
+    server.login(user_login, password)
+  File "/usr/lib/python3.11/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "/usr/lib/python3.11/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/routes.py", line 27, in contact_page
+    create_mail_server(form)
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py", line 52, in create_mail_server
+    with smtplib.SMTP(host=host, port=port) as server:
+  File "/usr/lib/python3.11/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+2023-11-27 18:17:30,114 ERROR: Exception on /contact [POST] [in /home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py", line 54, in create_mail_server
+    server.login(user_login, password)
+  File "/usr/lib/python3.11/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "/usr/lib/python3.11/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/routes.py", line 27, in contact_page
+    create_mail_server(form)
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py", line 52, in create_mail_server
+    with smtplib.SMTP(host=host, port=port) as server:
+  File "/usr/lib/python3.11/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+2023-11-27 19:40:25,852 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-27 19:41:03,917 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-27 19:41:35,999 ERROR: Exception on /contact [POST] [in /home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py", line 48, in email_server
+    server.login(user_login, password)
+  File "/usr/lib/python3.11/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ^^^^^^^^^^
+  File "/usr/lib/python3.11/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/routes.py", line 33, in contact_page
+    email_server(form)
+  File "/home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py", line 46, in email_server
+    with smtplib.SMTP(host=host, port=port) as server:
+  File "/usr/lib/python3.11/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+2023-11-27 19:47:00,559 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]
+2023-11-27 19:47:26,843 INFO: Successfully result was sent to the recipient email [in /home/alex/production_projects/makeup_artist_website/app/main_pages/mailer.py:51]
+2023-11-27 19:48:38,139 INFO: Website startup [in /home/alex/production_projects/makeup_artist_website/app/__init__.py:54]

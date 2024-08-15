@@ -1,0 +1,62 @@
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    <!-- Banner Title -->
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/05.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <div class="title mt-60 animate-box" data-animate-effect="fadeInUp">
+                            <h1 class="mb-0">Читать</h1>
+                            <h6>макияж для фотосессии</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service-area py-120">
+        <div class="container">
+            <div class="row">
+                <!-- Makeup Categories -->
+                {% include 'includes/makeup_categories.html' %}
+                <div class="col-xl-8 col-lg-8">
+                    <div class="service-details">
+                        <div class="service-details-img mb-30">
+                            <img src="{{ url_for('static', filename='images/blog/blog_pages/bs5.jpg')}}" alt="">
+                        </div>
+                        <div class="service-details">
+                            <h3 class="mb-20">Для фотосессии</h3>
+                            <p class="mb-20">
+                                Вы наверняка замечали, что лицо, смотрящее на вас в отражении зеркала, выглядит идеально,
+                                а то, что получается на фотографии, это совсем другая история. Почему так происходит?
+                                Дело в том, что фотокамера улавливает такие детали, которые не видны невооруженным глазом,
+                                благодаря чему лицо на снимке может выглядеть не лучшим образом. Еще запомните, что камера
+                                никогда не передает цвет в точности, как мы видим в реальной жизни. Поэтому макияж для
+                                фотосессии должен быть несколько более интенсивным, чем тот, который делается в повседневной
+                                жизни. Даже если хочется, чтобы лицо на фото выглядело максимально естественно, все равно
+                                нужно немного преувеличить наносимый макияж, потому что он не будет так сильно виден через
+                                камеру. Во время фотосессии фотограф всегда следит за тем, чтобы объект съемки был хорошо
+                                освещен естественным или искусственным светом. А свет, отражающийся от лица, меняет его
+                                внешний вид и делает его менее ярким, чем оно есть на самом деле.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6 mb-20">
+                                    <img src="{{ url_for('static', filename='images/blog/blog_pages/bss1.jpg')}}" alt="">
+                                </div>
+                                <div class="col-md-6 mb-20">
+                                    <img src="{{ url_for('static', filename='images/blog/blog_pages/bss2.jpg')}}" alt="">
+                                </div>
+                            </div>
+                            <p class="mb-20">
+                                Макияж - важная составляющая подготовки к съемке, от которого будет сильно зависеть общее
+                                впечатление от фото, целостность картинки и то, как вы будете выглядеть на фото.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}

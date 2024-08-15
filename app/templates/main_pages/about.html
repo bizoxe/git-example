@@ -1,0 +1,53 @@
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    <!-- Banner Title -->
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/02.jpg')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right">
+                        <div class="title mt-60 animate-box" data-animate-effect="fadeInUp">
+                            <h1 class="mb-0">Обо мне</h1>
+                            <h6>когда любишь свою профессию!</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <span>более 10 лет опыта</span>
+                    <h1>обо мне</h1>
+                    <p>
+                        Я - профессиональный визажист, предлагающий широкий спектр услуг для создания идеального макияжа.
+                    Независимо от того, нужен вам дневной натуральный образ, сияющая вечерняя нежность или утонченный
+                    свадебный макияж, я гарантирую вам безупречный результат. Мои навыки и опыт позволяют мне работать с
+                    любым типом кожи и структурой лица, чтобы подчеркнуть вашу неповторимую красоту.
+                    </p>
+                    <p><b>Заказывая услугу макияжа у меня, вы получаете:</b></p>
+                    <ul>
+                        <li><i class="ti-check"></i> <b>Профессионализм:</b> имею обширный опыт работы, постоянно совершенствую свои навыки, слежу за последними тенденциями в макияже.</li>
+                        <li><i class="ti-check"></i> <b>Индивидуальный подход:</b> учитываю индивидуальные особенности каждого клиента, его пожелания и стиль.</li>
+                        <li><i class="ti-check"></i> <b>Высококачественные продукты:</b> работаю только с профессиональными и проверенными брендами косметики, чтобы обеспечить долговременность и
+                        безупречность вашего макияжа.</li>
+                        <li><i class="ti-check"></i> <b>Гигиена:</b> важным аспектом моей работы являются соблюдение правил гигиены и безопасности. Использую только чистые инструменты.</li>
+                        <li><i class="ti-check"></i> <b>Консультации:</b> в процессе работы даю профессиональные советы и рекомендации по подбору косметики.</li>
+                    </ul>
+                    <p><b>Вместе мы создадим неповторимый образ!</b></p>
+                    <p class="text-right mb-0"><span><i>Елена Долгорукая</i></span></p>
+                    <p class="text-right"><i>визажист & стилист</i></p>
+                </div>
+                <div class="col-md-4">
+                    <div class="fredia-about-img animate-box" data-animate-effect="fadeInUp">
+                        <div class="img"> <img src="{{ url_for('static', filename='images/elena/t1.jpg')}}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   {% endblock content %}
